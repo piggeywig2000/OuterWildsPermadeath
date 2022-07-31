@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/amazingalek/owml/master/schemas/manifest_schema.json",
+  "filename": "Permadeath.dll",
+  "author": "piggeywig2000",
+  "name": "Permadeath",
+  "uniqueName": "piggeywig2000.Permadeath",
+  "version": "1.0.0",
+  "owmlVersion": "2.5.2"
+}
