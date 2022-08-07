@@ -127,7 +127,7 @@ namespace Permadeath.Patches
 
         [HarmonyPatch(nameof(GameOverController.Update))]
         [HarmonyPrefix]
-        public static bool UpdatePostfix(GameOverController __instance)
+        public static bool UpdatePrefix(GameOverController __instance)
         {
             if (!Permadeath.IsEnabled) return true;
 
