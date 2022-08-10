@@ -19,7 +19,7 @@ namespace Permadeath
         {
             campfire = this.GetRequiredComponent<Campfire>();
 
-            if (campfire._interactVolume != null && campfire._canSleepHere)
+            if (Permadeath.IsEnabled && campfire._interactVolume != null && campfire._canSleepHere)
             {
                 campfire._interactVolume.OnGainFocus += OnGainFocus;
                 campfire._interactVolume.OnLoseFocus += OnLoseFocus;
@@ -40,7 +40,7 @@ namespace Permadeath
 
         private void Start()
         {
-            if (campfire._canSleepHere)
+            if (Permadeath.IsEnabled && campfire._canSleepHere)
             {
                 meditatePrompt.SetDisplayState(campfire.CanSleepHereNow() ? ScreenPrompt.DisplayState.Normal : ScreenPrompt.DisplayState.GrayedOut);
                 meditateCommand.EnableAllActions(true);
@@ -76,7 +76,7 @@ namespace Permadeath
 
         private void Update()
         {
-            if (campfire._canSleepHere)
+            if (Permadeath.IsEnabled && campfire._canSleepHere)
             {
                 meditatePrompt.SetVisibility(false);
                 if (campfire._interactVolumeFocus && !campfire._isPlayerSleeping && !campfire._isPlayerRoasting && OWInput.IsInputMode(InputMode.Character))
