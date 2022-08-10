@@ -90,6 +90,8 @@ namespace Permadeath
 
         private void InitSolarSystemAndEye()
         {
+            IsEnabled = SaveManager.Data.GetOrAddCurrentProfile().PermadeathEnabled;
+            SaveManager.Save();
             if (IsEnabled)
             {
                 ModHelper.Console.WriteLine("Permadeath mode enabled", MessageType.Info);
