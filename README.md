@@ -8,6 +8,7 @@ Try to fill out every line in the ship log without dying once
   - The supernova
   - Meditating
   - The game's ending
+  - <details><summary>DLC spoiler</summary>Dying for any reason in the simulation when you are already dead in real life</details>
 - Anti-cheat protection to prevent cheating your way out of dying
   - Quitting the game is only possible at the end of the loop.
   - Meditating is only allowed at a campfire. Press V (or LT on controller) at a campfire to meditate until the next loop.
