@@ -32,7 +32,7 @@ namespace Permadeath.Patches
             if (Permadeath.IsEnabled && !hasOverriddenFlashback)
             {
                 DeathType lastDeathType = PlayerData.GetLastDeathType();
-                if (lastDeathType != DeathType.Supernova && lastDeathType != DeathType.BigBang && lastDeathType != DeathType.Meditation && lastDeathType != DeathType.TimeLoop)
+                if (lastDeathType != DeathType.Supernova && lastDeathType != DeathType.BigBang && lastDeathType != DeathType.Meditation && lastDeathType != DeathType.TimeLoop && lastDeathType != DeathType.Dream)
                 {
                     //Trigger game over
                     __instance.gameObject.GetRequiredComponent<GameOverController>().OnTriggerDeathOutsideTimeLoop();
