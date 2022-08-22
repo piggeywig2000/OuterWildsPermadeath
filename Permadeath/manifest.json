@@ -4,6 +4,7 @@
   "author": "piggeywig2000",
   "name": "Permadeath",
   "uniqueName": "piggeywig2000.Permadeath",
-  "version": "1.1.0",
-  "owmlVersion": "2.6.0"
+  "version": "1.1.1",
+  "owmlVersion": "2.6.0",
+  "pathsToPreserve": [ "permadeathsave.json" ]
 }
