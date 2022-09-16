@@ -136,20 +136,20 @@ namespace Permadeath.Patches
             float visibleDuration = 0f;
             if (!__instance._fadedInText && Time.time > __instance._gameOverTime + __instance._textFadeDelay)
             {
-                __instance._textAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeInCurve);
+                __instance._textAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeCurve);
                 __instance._fadedInText = true;
             }
             else if (!hasFadedInPercentage && Time.time > __instance._gameOverTime + __instance._textFadeDelay + progressDelay)
             {
-                progressAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeInCurve);
-                percentageAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeInCurve);
+                progressAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeCurve);
+                percentageAnimator.AnimateTo(1f, Vector3.one, fadeDuration, __instance._fadeCurve);
                 hasFadedInPercentage = true;
             }
             else if (!__instance._fadedOutText && Time.time > __instance._gameOverTime + __instance._textFadeDelay + progressDelay + fadeDuration + visibleDuration)
             {
-                __instance._textAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeOutCurve);
-                progressAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeOutCurve);
-                percentageAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeOutCurve);
+                __instance._textAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeCurve, invertCurve: true);
+                progressAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeCurve, invertCurve: true);
+                percentageAnimator.AnimateTo(0f, Vector3.one, fadeDuration, __instance._fadeCurve, invertCurve: true);
                 __instance._fadedOutText = true;
             }
             else if (__instance._fadedOutText && __instance._textAnimator.IsComplete() && !__instance._loading)
